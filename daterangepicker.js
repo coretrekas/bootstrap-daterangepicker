@@ -710,7 +710,7 @@
                 html += '<th></th>';
 
             if ((!minDate || minDate.isBefore(calendar.firstDay)) && (!this.linkedCalendars || side == 'left')) {
-                html += '<th class="prev available"><i class="fa fa-' + arrow.left + ' glyphicon glyphicon-' + arrow.left + '"></i></th>';
+                html += '<th class="prev available"><button class="button"> < </button></th>'; // <i class="fa fa-' + arrow.left + ' glyphicon glyphicon-' + arrow.left + '"></i></th>';
             } else {
                 html += '<th></th>';
             }
@@ -750,9 +750,9 @@
                 dateHtml = monthHtml + yearHtml;
             }
 
-            html += '<th colspan="5" class="month">' + dateHtml + '</th>';
+            html += '<th colspan="5" class="month"><div class="col-md-12">' + dateHtml + '</div></th>';
             if ((!maxDate || maxDate.isAfter(calendar.lastDay)) && (!this.linkedCalendars || side == 'right' || this.singleDatePicker)) {
-                html += '<th class="next available"><i class="fa fa-' + arrow.right + ' glyphicon glyphicon-' + arrow.right + '"></i></th>';
+                html += '<th class="next available"><button class="button"> > </button></th>'; //<i class="fa fa-' + arrow.right + ' glyphicon glyphicon-' + arrow.right + '"></i></th>';
             } else {
                 html += '<th></th>';
             }
@@ -1646,3 +1646,4 @@
     return DateRangePicker;
 
 }));
+
