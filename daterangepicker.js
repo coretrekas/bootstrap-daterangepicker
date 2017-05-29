@@ -838,7 +838,7 @@
                     if (d === dm.endOf('month').format('YYYY-MM-DD') || calendar[row][col].isoWeekday() > 6)
                         classes.push('end');
 
-                    let inside = calendar[row][col].date();
+                    var inside = calendar[row][col].date();
                     //apply custom classes for this date
                     var isCustom = this.isCustomDate(calendar[row][col]);
 
